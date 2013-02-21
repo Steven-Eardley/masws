@@ -1,3 +1,6 @@
+*~
+.pyc
+
 blib/
 .build/
 _build/
