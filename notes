@@ -7,3 +7,6 @@ First considered using Automobile, but had to go a class up the hierarchy (Motor
 Invented our own RDF schema for MOT Test class
 
 Postcodes are matched on dbpedia
+
+Syntax validates with http://www.rdfabout.com/demo/validator/
+

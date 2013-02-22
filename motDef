@@ -8,7 +8,7 @@
 @prefix sch:    <http://schema.org/> .
 
 # Placeholder for our MOT vocab
-@prefix mot:    <http://vocab.inf.ed.ac.uk/> .
+@prefix mot:    <http://vocab.inf.ed.ac.uk/mot> .
 
 # Define a class for an MOT Test
 mot:Test    rdf:type    rdfs:Class ;

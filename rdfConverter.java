@@ -18,11 +18,11 @@ public static void main(String args[]) {
         FileWriter fstream3 = new FileWriter("RDF-Output.ttl", false);
         BufferedWriter out = new BufferedWriter(fstream3);
         
-        out.write("@Prefix dbpedia: <http://dbpedia.org/resource/> .\n");
-        out.write("@Prefix vso: <http://www.heppnetz.de/ontologies/vso/ns#> .\n");
-        out.write("@Prefix gr:  <http://purl.org/goodrelations/v1#> .\n");
-        out.write("@Prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n");
-        out.write("@Prefix mot: <http://vocab.inf.ed.ac.uk/> .\n\n");
+        out.write("@prefix dbpedia: <http://dbpedia.org/resource/> .\n");
+        out.write("@prefix vso: <http://www.heppnetz.de/ontologies/vso/ns#> .\n");
+        out.write("@prefix gr:  <http://purl.org/goodrelations/v1#> .\n");
+        out.write("@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n");
+        out.write("@prefix mot: <http://vocab.inf.ed.ac.uk/mot> .\n\n");
 
         while (((strLine = br.readLine()) != null)) {
             String [] objects = strLine.split("\\|");
@@ -54,7 +54,7 @@ public static void main(String args[]) {
             
             out.write(String.format("\tgr:hasManufacturer dbpedia:%s ;\n", (objects[8].charAt(0)) + objects[8].substring(1).toLowerCase()));
 
-            out.write(String.format("\tvso:vehiclemodel \"%s\"^^xsd:string ;\n", objects[9]));
+            out.write(String.format("\tmot:vehiclemodel \"%s\"^^xsd:string ;\n", objects[9]));
             
             out.write(String.format("\tvso:color \"%s\" ;\n", objects[10]));
 

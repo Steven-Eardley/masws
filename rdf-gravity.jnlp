@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- JNLP File for CULTOS Application --> 
+<jnlp spec="1.0+" codebase="http://semweb.salzburgresearch.at/apps/rdf-gravity/jws/" href="rdf-gravity.jnlp">
+
+    <application-desc main-class="at.salzburgresearch.rdfgraph.RDFGraph">
+    </application-desc>
+
+    <security>
+        <all-permissions/>
+    </security>
+    
+    <information> 
+        <title>RDF - Gravity 1.0</title> 
+        <vendor>WIS/KIS - Salzburg Research Forschungsges.m.b.H.</vendor> 
+        <homepage href="http://www.salzburgresearch.at"/> 
+        <description>RDF Graph Visualisation Tool</description> 
+        <description kind="short">RDF Graph Visualisation Tool developed by WIS/KIS Group @ Salzburg Research, Austria</description>
+        <description kind="one-line">RDF Graph Visualisation Tool</description>
+        <description kind="tooltip">RDF Graph Visualisation Tool</description>
+        <icon href="rdf-gravity-icon.gif"/>
+        <offline-allowed/> 
+    </information>
+     
+    <resources> 
+        <j2se version="1.4+" max-heap-size="256m" />
+		<!-- JWS launching client -->     
+		<jar href="rdf-gravity-v1.0.jar"/>
+		<jar href="rdf-gravity-etc.jar"/>
+		   
+		<!-- Libs -->
+		<jar href="antlr.jar"/>
+		<jar href="colt.jar"/>
+		<jar href="concurrent.jar"/>
+		<jar href="icu4j.jar"/>
+		<jar href="jakarta-oro-2.0.5.jar"/>
+		<jar href="jena.jar"/>
+		<jar href="jung.jar"/>
+		<jar href="junit.jar"/>
+		<jar href="log4j-1.2.7.jar"/>
+		<jar href="rdf-api-2001-01-19.jar"/>
+		<jar href="skinlf.jar"/>
+		<jar href="xercesImpl.jar"/>
+		<jar href="xmlParserAPIs.jar"/>
+    </resources> 
+</jnlp> 
