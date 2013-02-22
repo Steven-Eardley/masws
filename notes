@@ -5,3 +5,5 @@ VSO : vehicle sales ontology
 First considered using Automobile, but had to go a class up the hierarchy (MotorizedRoadVehicle) since can't guarantee all are cars (vans / motorbikes). Explored the possibility of using the MOT test class data (motorbikes are tested under class 1, cars under 4) to classify the vehicles, but there is no way of discerning the other subclasses at that level - BusOrCoach, Truck, Van - these may all be tested under MOT class 4. 
 
 Invented our own RDF schema for MOT Test class
+
+Postcodes are matched on dbpedia

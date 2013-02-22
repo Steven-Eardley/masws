@@ -1,15 +1,15 @@
+/* MASWS Assignment 2
+Diljá Rudolfsdóttir & Steven Eardley 2013
+*/
+
 import java.io.*;
 import java.util.*;
-
 
 public class rdfConverter{
 
 public static void main(String args[]) {
     try{
-        
-        int count = 1;
-        String testid = null;
-        
+
         FileInputStream fstream = new FileInputStream(args[0]);
         
         BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
@@ -18,149 +18,83 @@ public static void main(String args[]) {
         FileWriter fstream3 = new FileWriter("RDF-Output.ttl", false);
         BufferedWriter out = new BufferedWriter(fstream3);
         
-        out.write("@Prefix dbpedia: <http://dbpedia.org/resource/> .");
-        out.newLine();
-        out.write("@Prefix vso: <http://www.heppnetz.de/ontologies/vso/ns#> .");
-        out.newLine();
-        out.write("@Prefix gr: <http://purl.org/goodrelations/v1#> .");
-        out.newLine();
-        out.newLine();
-        
+        out.write("@Prefix dbpedia: <http://dbpedia.org/resource/> .\n");
+        out.write("@Prefix vso: <http://www.heppnetz.de/ontologies/vso/ns#> .\n");
+        out.write("@Prefix gr:  <http://purl.org/goodrelations/v1#> .\n");
+        out.write("@Prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n");
+        out.write("@Prefix mot: <http://vocab.inf.ed.ac.uk/> .\n\n");
 
         while (((strLine = br.readLine()) != null)) {
             String [] objects = strLine.split("\\|");
             
-            for (int i = 0; i < objects.length; i++){
-                
-                if (i == 0) {
-                    testid = objects[i];
+            // Create a class for the Test
+            out.write(String.format("_:%s a mot:Test ;\n", objects[0]));
 
-                }
-                if (i == 1) {
-                    System.out.println("_:" + testid + " VehicleID " + "\"" + objects[i] + "\"" + ";");
-                    out.write("_:" + testid + " VehicleID " + "\"" + objects[i] + "\"" + ";");
-                    out.newLine();
-                }
-                if (i == 2) {
-                    System.out.println(" TestDate " + "\"" + objects[i] + "\"" + ";");
-                    out.write(" TestDate " + "\"" + objects[i] + "\"" + ";");
-                    out.newLine();
-                }
-                if (i == 3) {
-                    System.out.println(" TestClassID " + "\"" + objects[i] + "\"" + ";");
-                    out.write(" TestClassID " + "\"" + objects[i] + "\"" + ";");
-                    out.newLine();
-                }
-                if (i == 4) {
-                    System.out.println(" TestType " + "\"" + objects[i] + "\"" + ";");
-                    out.write(" TestType " + "\"" + objects[i] + "\"" + ";");
-                    out.newLine();
-                }
-                if (i == 5) {
-                    System.out.println(" TestResult " + "\"" + objects[i] + "\"" + ";");
-                    out.write(" TestResult " + "\"" + objects[i] + "\"" + ";");
-                    out.newLine();
-                }
-                if (i == 6) {
-                    System.out.println(" vso:mileageFromOdometer " + "\"" + objects[i] + "\"" + ";");
-                    out.write(" vso:mileageFromOdometer " + "\"" + objects[i] + "\"" + ";");
-                    out.newLine();
-                }
-                if (i == 7) {
-                    System.out.println(" dbpedia:Postal_Code " + "dbpedia:"+ objects[i] + "_postcode_area" + ";");
-                    out.write(" dbpedia:Postal_Code " + "dbpedia:"+ objects[i] + "_postcode_area" + ";");
-                    out.newLine();
-                }
-                if (i == 8) {
-                    String manufacturer = (objects[i].charAt(0)) + objects[i].substring(1).toLowerCase();
-                    System.out.println(" gr:hasManufacturer " + "dbpedia:" + manufacturer + ";");
-                    out.write(" gr:hasManufacturer " +  "dbpedia:" + manufacturer  + ";");
-                    out.newLine();
-                }
-                if (i == 9) {
-                    System.out.println(" Model " + "\"" + objects[i] + "\"" + ";");
-                    out.write(" Model " + "\"" + objects[i] + "\"" + ";");
-                    out.newLine();
-                }
-                if (i == 10) {
-                    System.out.println(" vso:color " + "\"" + objects[i] + "\"" + ";");
-                    out.write(" vso:color " + "\"" + objects[i] + "\"" + ";");
-                    out.newLine();
-                }
-                if (i == 11) {
-                    if("P".equals(objects[i])){
-                    System.out.println(" vso:fuelType " + "dbpedia:Gasoline" + ";");
-                    out.write(" vso:fuelType " + "dbpedia:Gasoline"+ ";");
-                    out.newLine();
-                    }
-                    if("D".equals(objects[i])){
-                    System.out.println(" vso:fuelType " + "dbpedia:Diesel_fuel" + ";");
-                    out.write(" vso:fuelType " + "dbpedia:Diesel_fuel" + ";");
-                    out.newLine();
-                    }
-                    if("E".equals(objects[i])){
-                    System.out.println(" vso:fuelType " + "dbpedia:Electricity" + ";");
-                    out.write(" vso:fuelType " + "dbpedia:Electricity" + ";");
-                    out.newLine();
-                    }
-                    if("S".equals(objects[i])){
-                    System.out.println(" vso:fuelType " + "dbpedia:Steam" + ";");
-                    out.write(" vso:fuelType " + "dbpedia:Steam" + ";");
-                    out.newLine();
-                    }
-                    if("N".equals(objects[i])) {
-                        System.out.println(" vso:fuelType " + "dbpedia:Liquefied_natural_gas" + ";");
-                        out.write(" vso:fuelType " + "dbpedia:Liquefied_natural_gas" + ";");
-                        out.newLine();
-                    }
-                    if("F".equals(objects[i])) {
-                        System.out.println(" vso:fuelType " + "dbpedia:Fuel_cell" + ";");
-                        out.write(" vso:fuelType " + "dbpedia:Fuel_cell" + ";");
-                        out.newLine();
-                    }
-                    if("C".equals(objects[i])) {
-                        System.out.println(" vso:fuelType " + "dbpedia:Compressed_natural_gas" + ";");
-                        out.write(" vso:fuelType " + "dbpedia:Compressed_natural_gas" + ";");
-                        out.newLine();
-                    }
-                    if("L".equals(objects[i])) {
-                        System.out.println(" vso:fuelType " + "dbpedia:Liquefied_petroleum_gas" + ";");
-                        out.write(" vso:fuelType " + "dbpedia:Liquefied_petroleum_gas" + ";");
-                        out.newLine();
-                    }
-                    if("O".equals(objects[i])) {
-                        System.out.println(" vso:fuelType " + "\"Other\"" + ";");
-                        out.write(" vso:fuelType " + "\"Other\"" + ";");
-                        out.newLine();
-                    }
-                }
-                if (i == 12) {
-                    System.out.println(" vso:engineDisplacement " + "\"" + objects[i] + "\"" + ";");
-                    out.write(" vso:engineDisplacement " + "\"" + objects[i] + "\"" + ";");
-                    out.newLine();
-                }
-                if (i == 13) {
-                    System.out.println(" vso:firstRegistration " + "\"" + objects[i] + "\"" + ".");
-                    out.write(" vso:firstRegistration " + "\"" + objects[i] + "\"" + ".");
-                    out.newLine();
-                }
-                
-                
-           
-            }
-            count = count + 1;
-            out.newLine();
-            System.out.println("");
+            // Add test properties
+            out.write(String.format("\tmot:testid \"%s\"^^xsd:integer ;\n", objects[0]));
             
+            out.write(String.format("\tmot:testvehicle _:%s ;\n", objects[1]));
+
+            out.write(String.format("\tmot:testdate \"%s\"^^xsd:date ;\n", objects[2]));
+            
+            out.write(String.format("\tmot:testclassid \"%s\"^^xsd:string ;\n", objects[3]));
+            
+            out.write(String.format("\tmot:testtype \"%s\"^^xsd:string ;\n", objects[4]));
+
+            out.write(String.format("\tmot:testresult \"%s\"^^xsd:string ;\n", objects[5]));
+                             
+            out.write(String.format("\tmot:testlocation dbpedia:%s_postcode_area .\n", objects[7]));
+             
+            // Create a class for the vehicle
+            out.write(String.format("_:%s a mot:Vehicle ;\n", objects[1]));
+            
+            out.write(String.format("\tvso:mileageFromOdometer [ a gr:QuantitativeValueFloat ;\n\t\tgr:hasValueFloat \"%s\"^^xsd:float ;\n\t\tgr:hasUnitOfMeasurement \"SMI\"^^xsd:string] ;\n", objects[6]));
+            
+            out.write(String.format("\tmot:vehicleid \"%s\"^^xsd:integer ;\n", objects[1]));
+            
+            out.write(String.format("\tgr:hasManufacturer dbpedia:%s ;\n", (objects[8].charAt(0)) + objects[8].substring(1).toLowerCase()));
+
+            out.write(String.format("\tvso:vehiclemodel \"%s\"^^xsd:string ;\n", objects[9]));
+            
+            out.write(String.format("\tvso:color \"%s\" ;\n", objects[10]));
+
+            String fuelType;
+            char sw = objects[11].charAt(0);
+            switch (sw) {
+                case 'P':  fuelType = "dbpedia:Gasoline";
+                        break;
+                case 'D':  fuelType = "dbpedia:Diesel_fuel";
+                        break;
+                case 'E':  fuelType = "dbpedia:Electricity";
+                        break;
+                case 'S':  fuelType = "dbpedia:Steam";
+                        break;
+                case 'N':  fuelType = "dbpedia:Liquefied_natural_gas";
+                        break;                        
+                case 'F':  fuelType = "dbpedia:Fuel_cell";
+                        break;
+                case 'C':  fuelType = "dbpedia:Compressed_natural_gas";
+                        break;
+                case 'L':  fuelType = "dbpedia:Liquefied_petroleum_gas";
+                        break;
+                case 'O':  fuelType = "Other";
+                        break;                        
+                default: fuelType = "None Found";
+                        break;
+            }
+            out.write(String.format("\tvso:fuelType %s ;\n", fuelType));
+
+            out.write(String.format("\tvso:engineDisplacement [ a gr:QuantitativeValueFloat ;\n\t\tgr:hasValueFloat \"%s\"^^xsd:float ;\n\t\tgr:hasUnitOfMeasurement \"CMQ\"^^xsd:string ] ;\n", objects[12]));
+                             
+            out.write(String.format("\tvso:firstRegistration \"%s\"^^xsd:date .\n\n", objects[13]));
         }
+        System.out.println("\nSuccess! Written to RDF-Output.ttl\n");
         out.close();
         fstream.close();
-        
-        }
+    }
     
     catch (Exception e) {// Catch exception if any
     System.err.println("Error: " + e.getMessage());
     }
-
     }
 }

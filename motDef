@@ -1,7 +1,11 @@
+# MASWS Assignment 2
+# Diljá Rudolfsdóttir & Steven Eardley 2013
+
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
-@prefix vso:     <http://purl.org/vso/ns#> .
+@prefix vso:    <http://purl.org/vso/ns#> .
+@prefix sch:    <http://schema.org/> .
 
 # Placeholder for our MOT vocab
 @prefix mot:    <http://vocab.inf.ed.ac.uk/> .
@@ -23,6 +27,10 @@ mot:testdate    rdf:type    rdf:Property .
 mot:testdate    rdfs:range  xsd:date .
 mot:testdate    rdfs:domain mot:Test .
 
+mot:testclassid    rdf:type    rdf:Property .
+mot:testclassid    rdfs:range  xsd:string .
+mot:testclassid    rdfs:domain mot:Test .
+
 mot:testtype    rdf:type    rdf:Property .
 mot:testtype    rdfs:range  xsd:string .
 mot:testtype    rdfs:domain mot:Test .
@@ -32,7 +40,7 @@ mot:testresult    rdfs:range  xsd:string .
 mot:testresult    rdfs:domain mot:Test .
 
 mot:testlocation    rdf:type    rdf:Property .
-mot:testlocation    rdfs:range  xsd:string .
+mot:testlocation    rdfs:range  sch:AdministrativeArea .
 mot:testlocation    rdfs:domain mot:Test .
 
 
@@ -45,3 +53,7 @@ mot:Vehicle rdf:type    rdfs:Class ;
 mot:vehicleid  rdf:type    rdf:Property .
 mot:vehicleid  rdfs:range  xsd:integer .
 mot:vehicleid  rdfs:domain mot:Vehicle .
+
+mot:vehiclemodel    rdf:type    rdf:Property .
+mot:vehiclemodel    rdfs:range  xsd:string .
+mot:vehiclemodel    rdfs:domain mot:Vehicle .
