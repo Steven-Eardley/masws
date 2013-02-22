@@ -1,6 +1,7 @@
 import java.io.*;
 import java.util.*;
 
+
 public class rdfConverter{
 
 public static void main(String args[]) {
@@ -14,7 +15,7 @@ public static void main(String args[]) {
         BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
         String strLine;
         
-        FileWriter fstream3 = new FileWriter("RDF-Output.txt", false);
+        FileWriter fstream3 = new FileWriter("RDF-Output.ttl", false);
         BufferedWriter out = new BufferedWriter(fstream3);
         
         out.write("@Prefix dbpedia: <http://dbpedia.org/resource/> .");
@@ -36,90 +37,111 @@ public static void main(String args[]) {
 
                 }
                 if (i == 1) {
-                    System.out.println("_:" + testid + " VehicleID " + objects[i] + ";");
-                    out.write("_:" + testid + " VehicleID " + objects[i] + ";");
+                    System.out.println("_:" + testid + " VehicleID " + "\"" + objects[i] + "\"" + ";");
+                    out.write("_:" + testid + " VehicleID " + "\"" + objects[i] + "\"" + ";");
                     out.newLine();
                 }
                 if (i == 2) {
-                    System.out.println(" TestDate " + objects[i] + ";");
-                    out.write(" TestDate " + objects[i] + ";");
+                    System.out.println(" TestDate " + "\"" + objects[i] + "\"" + ";");
+                    out.write(" TestDate " + "\"" + objects[i] + "\"" + ";");
                     out.newLine();
                 }
                 if (i == 3) {
-                    System.out.println(" TestClassID " + objects[i] + ";");
-                    out.write(" TestClassID " + objects[i] + ";");
+                    System.out.println(" TestClassID " + "\"" + objects[i] + "\"" + ";");
+                    out.write(" TestClassID " + "\"" + objects[i] + "\"" + ";");
                     out.newLine();
                 }
                 if (i == 4) {
-                    System.out.println(" TestType " + objects[i] + ";");
-                    out.write(" TestType " + objects[i] + ";");
+                    System.out.println(" TestType " + "\"" + objects[i] + "\"" + ";");
+                    out.write(" TestType " + "\"" + objects[i] + "\"" + ";");
                     out.newLine();
                 }
                 if (i == 5) {
-                    System.out.println(" TestResult " + objects[i] + ";");
-                    out.write(" TestResult " + objects[i] + ";");
+                    System.out.println(" TestResult " + "\"" + objects[i] + "\"" + ";");
+                    out.write(" TestResult " + "\"" + objects[i] + "\"" + ";");
                     out.newLine();
                 }
                 if (i == 6) {
-                    System.out.println(" vso:mileageFromOdometer " + objects[i] + ";");
-                    out.write(" vso:mileageFromOdometer " + objects[i] + ";");
+                    System.out.println(" vso:mileageFromOdometer " + "\"" + objects[i] + "\"" + ";");
+                    out.write(" vso:mileageFromOdometer " + "\"" + objects[i] + "\"" + ";");
                     out.newLine();
                 }
                 if (i == 7) {
-                    System.out.println(" dbpedia:Postal_Code " + objects[i] + ";");
-                    out.write(" dbpedia:Postal_Code " + objects[i] + ";");
+                    System.out.println(" dbpedia:Postal_Code " + "dbpedia:"+ objects[i] + "_postcode_area" + ";");
+                    out.write(" dbpedia:Postal_Code " + "dbpedia:"+ objects[i] + "_postcode_area" + ";");
                     out.newLine();
                 }
                 if (i == 8) {
-                    System.out.println(" gr:hasManufacturer " + objects[i] + ";");
-                    out.write(" gr:hasManufacturer " + objects[i] + ";");
+                    String manufacturer = (objects[i].charAt(0)) + objects[i].substring(1).toLowerCase();
+                    System.out.println(" gr:hasManufacturer " + "dbpedia:" + manufacturer + ";");
+                    out.write(" gr:hasManufacturer " +  "dbpedia:" + manufacturer  + ";");
                     out.newLine();
                 }
                 if (i == 9) {
-                    System.out.println(" Model " + objects[i] + ";");
-                    out.write(" Model " + objects[i] + ";");
+                    System.out.println(" Model " + "\"" + objects[i] + "\"" + ";");
+                    out.write(" Model " + "\"" + objects[i] + "\"" + ";");
                     out.newLine();
                 }
                 if (i == 10) {
-                    System.out.println(" vso:color " + objects[i] + ";");
-                    out.write(" vso:color " + objects[i] + ";");
+                    System.out.println(" vso:color " + "\"" + objects[i] + "\"" + ";");
+                    out.write(" vso:color " + "\"" + objects[i] + "\"" + ";");
                     out.newLine();
                 }
                 if (i == 11) {
                     if("P".equals(objects[i])){
                     System.out.println(" vso:fuelType " + "dbpedia:Gasoline" + ";");
-                    out.write(" vso:fuelType " + objects[i] + ";");
+                    out.write(" vso:fuelType " + "dbpedia:Gasoline"+ ";");
                     out.newLine();
                     }
                     if("D".equals(objects[i])){
                     System.out.println(" vso:fuelType " + "dbpedia:Diesel_fuel" + ";");
-                    out.write(" vso:fuelType " + objects[i] + ";");
+                    out.write(" vso:fuelType " + "dbpedia:Diesel_fuel" + ";");
                     out.newLine();
                     }
                     if("E".equals(objects[i])){
                     System.out.println(" vso:fuelType " + "dbpedia:Electricity" + ";");
-                    out.write(" vso:fuelType " + objects[i] + ";");
+                    out.write(" vso:fuelType " + "dbpedia:Electricity" + ";");
                     out.newLine();
                     }
                     if("S".equals(objects[i])){
                     System.out.println(" vso:fuelType " + "dbpedia:Steam" + ";");
-                    out.write(" vso:fuelType " + objects[i] + ";");
+                    out.write(" vso:fuelType " + "dbpedia:Steam" + ";");
                     out.newLine();
                     }
-                    else {
-                        System.out.println(" vso:fuelType " + objects[i] + ";");
-                        out.write(" vso:fuelType " + objects[i] + ";");
+                    if("N".equals(objects[i])) {
+                        System.out.println(" vso:fuelType " + "dbpedia:Liquefied_natural_gas" + ";");
+                        out.write(" vso:fuelType " + "dbpedia:Liquefied_natural_gas" + ";");
+                        out.newLine();
+                    }
+                    if("F".equals(objects[i])) {
+                        System.out.println(" vso:fuelType " + "dbpedia:Fuel_cell" + ";");
+                        out.write(" vso:fuelType " + "dbpedia:Fuel_cell" + ";");
+                        out.newLine();
+                    }
+                    if("C".equals(objects[i])) {
+                        System.out.println(" vso:fuelType " + "dbpedia:Compressed_natural_gas" + ";");
+                        out.write(" vso:fuelType " + "dbpedia:Compressed_natural_gas" + ";");
+                        out.newLine();
+                    }
+                    if("L".equals(objects[i])) {
+                        System.out.println(" vso:fuelType " + "dbpedia:Liquefied_petroleum_gas" + ";");
+                        out.write(" vso:fuelType " + "dbpedia:Liquefied_petroleum_gas" + ";");
+                        out.newLine();
+                    }
+                    if("O".equals(objects[i])) {
+                        System.out.println(" vso:fuelType " + "\"Other\"" + ";");
+                        out.write(" vso:fuelType " + "\"Other\"" + ";");
                         out.newLine();
                     }
                 }
                 if (i == 12) {
-                    System.out.println(" vso:engineDisplacement " + objects[i] + ";");
-                    out.write(" vso:engineDisplacement " + objects[i] + ";");
+                    System.out.println(" vso:engineDisplacement " + "\"" + objects[i] + "\"" + ";");
+                    out.write(" vso:engineDisplacement " + "\"" + objects[i] + "\"" + ";");
                     out.newLine();
                 }
                 if (i == 13) {
-                    System.out.println(" vso:firstRegistration " + objects[i] + ".");
-                    out.write(" vso:firstRegistration " + objects[i] + ".");
+                    System.out.println(" vso:firstRegistration " + "\"" + objects[i] + "\"" + ".");
+                    out.write(" vso:firstRegistration " + "\"" + objects[i] + "\"" + ".");
                     out.newLine();
                 }
                 
@@ -128,6 +150,7 @@ public static void main(String args[]) {
             }
             count = count + 1;
             out.newLine();
+            System.out.println("");
             
         }
         out.close();

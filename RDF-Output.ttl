@@ -1,0 +1,578 @@
+@Prefix dbpedia: <http://dbpedia.org/resource/> .
+@Prefix vso: <http://www.heppnetz.de/ontologies/vso/ns#> .
+@Prefix gr: <http://purl.org/goodrelations/v1#> .
+
+_:31542124 VehicleID "7172659";
+ TestDate "2011-01-01";
+ TestClassID "1";
+ TestType "N";
+ TestResult "P";
+ vso:mileageFromOdometer "30947";
+ dbpedia:Postal_Code dbpedia:PE_postcode_area;
+ gr:hasManufacturer dbpedia:Yamaha;
+ Model "YQ 50 AEROX";
+ vso:color "WHITE";
+ vso:fuelType dbpedia:Gasoline;
+ vso:engineDisplacement "49";
+ vso:firstRegistration "2005-08-17".
+
+_:44411013 VehicleID "9974237";
+ TestDate "2011-01-01";
+ TestClassID "1";
+ TestType "N";
+ TestResult "P";
+ vso:mileageFromOdometer "4612";
+ dbpedia:Postal_Code dbpedia:SO_postcode_area;
+ gr:hasManufacturer dbpedia:Peugeot;
+ Model "SPEEDFIGHT";
+ vso:color "BLUE";
+ vso:fuelType dbpedia:Gasoline;
+ vso:engineDisplacement "49";
+ vso:firstRegistration "2002-02-01".
+
+_:57092466 VehicleID "12778150";
+ TestDate "2011-01-01";
+ TestClassID "1";
+ TestType "N";
+ TestResult "P";
+ vso:mileageFromOdometer "593";
+ dbpedia:Postal_Code dbpedia:CT_postcode_area;
+ gr:hasManufacturer dbpedia:Hongdou;
+ Model "GY 200";
+ vso:color "RED";
+ vso:fuelType dbpedia:Gasoline;
+ vso:engineDisplacement "200";
+ vso:firstRegistration "2007-03-01".
+
+_:76204862 VehicleID "16726889";
+ TestDate "2011-01-01";
+ TestClassID "1";
+ TestType "N";
+ TestResult "P";
+ vso:mileageFromOdometer "10652";
+ dbpedia:Postal_Code dbpedia:SW_postcode_area;
+ gr:hasManufacturer dbpedia:Piaggio;
+ Model "VESPA LX 125";
+ vso:color "BLACK";
+ vso:fuelType dbpedia:Gasoline;
+ vso:engineDisplacement "124";
+ vso:firstRegistration "2006-11-03".
+
+_:139254768 VehicleID "27959871";
+ TestDate "2011-01-01";
+ TestClassID "1";
+ TestType "N";
+ TestResult "P";
+ vso:mileageFromOdometer "34606";
+ dbpedia:Postal_Code dbpedia:SW_postcode_area;
+ gr:hasManufacturer dbpedia:Bsa;
+ Model "UNCLASSIFIED";
+ vso:color "BLUE";
+ vso:fuelType dbpedia:Gasoline;
+ vso:engineDisplacement "175";
+ vso:firstRegistration "1967-12-31".
+
+_:15928615 VehicleID "3799805";
+ TestDate "2011-01-01";
+ TestClassID "2";
+ TestType "N";
+ TestResult "P";
+ vso:mileageFromOdometer "18903";
+ dbpedia:Postal_Code dbpedia:BB_postcode_area;
+ gr:hasManufacturer dbpedia:Yamaha;
+ Model "YZF-R1";
+ vso:color "RED";
+ vso:fuelType dbpedia:Gasoline;
+ vso:engineDisplacement "998";
+ vso:firstRegistration "2001-10-05".
+
+_:49476788 VehicleID "11037289";
+ TestDate "2011-01-01";
+ TestClassID "2";
+ TestType "N";
+ TestResult "P";
+ vso:mileageFromOdometer "52827";
+ dbpedia:Postal_Code dbpedia:BB_postcode_area;
+ gr:hasManufacturer dbpedia:Triumph;
+ Model "UNCLASSIFIED";
+ vso:color "ORANGE";
+ vso:fuelType dbpedia:Gasoline;
+ vso:engineDisplacement "885";
+ vso:firstRegistration "1992-04-06".
+
+_:120827495 VehicleID "25015504";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "F";
+ TestResult "P";
+ vso:mileageFromOdometer "80175";
+ dbpedia:Postal_Code dbpedia:B_postcode_area;
+ gr:hasManufacturer dbpedia:Peugeot;
+ Model "307 RAPIER HDI";
+ vso:color "BLUE";
+ vso:fuelType dbpedia:Diesel_fuel;
+ vso:engineDisplacement "1997";
+ vso:firstRegistration "2002-09-27".
+
+_:143529348 VehicleID "28657261";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "F";
+ TestResult "P";
+ vso:mileageFromOdometer "83946";
+ dbpedia:Postal_Code dbpedia:SA_postcode_area;
+ gr:hasManufacturer dbpedia:Ford;
+ Model "FIESTA";
+ vso:color "BLUE";
+ vso:fuelType dbpedia:Gasoline;
+ vso:engineDisplacement "1299";
+ vso:firstRegistration "1998-12-31".
+
+_:149029240 VehicleID "29439710";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "F";
+ TestResult "P";
+ vso:mileageFromOdometer "120035";
+ dbpedia:Postal_Code dbpedia:B_postcode_area;
+ gr:hasManufacturer dbpedia:Peugeot;
+ Model "306 MERIDIAN";
+ vso:color "BLUE";
+ vso:fuelType dbpedia:Gasoline;
+ vso:engineDisplacement "1360";
+ vso:firstRegistration "1998-12-23".
+
+_:150347605 VehicleID "29627428";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "F";
+ TestResult "P";
+ vso:mileageFromOdometer "95554";
+ dbpedia:Postal_Code dbpedia:OL_postcode_area;
+ gr:hasManufacturer dbpedia:Volkswagen;
+ Model "GOLF GTI TURBO";
+ vso:color "BLACK";
+ vso:fuelType dbpedia:Gasoline;
+ vso:engineDisplacement "1800";
+ vso:firstRegistration "1998-12-21".
+
+_:182665691 VehicleID "5669870";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "F";
+ TestResult "P";
+ vso:mileageFromOdometer "117349";
+ dbpedia:Postal_Code dbpedia:BD_postcode_area;
+ gr:hasManufacturer dbpedia:Honda;
+ Model "CIVIC 1.4I S";
+ vso:color "SILVER";
+ vso:fuelType dbpedia:Gasoline;
+ vso:engineDisplacement "1396";
+ vso:firstRegistration "2000-05-01".
+
+_:199480756 VehicleID "36990824";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "F";
+ TestResult "P";
+ vso:mileageFromOdometer "44628";
+ dbpedia:Postal_Code dbpedia:BD_postcode_area;
+ gr:hasManufacturer dbpedia:Bmw;
+ Model "116I M SPORT";
+ vso:color "BLACK";
+ vso:fuelType dbpedia:Gasoline;
+ vso:engineDisplacement "1596";
+ vso:firstRegistration "2007-12-18".
+
+_:58619254 VehicleID "13057917";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "N";
+ TestResult "ABA";
+ vso:mileageFromOdometer "0";
+ dbpedia:Postal_Code dbpedia:B_postcode_area;
+ gr:hasManufacturer dbpedia:Vauxhall;
+ Model "VECTRA LS DTI 16V";
+ vso:color "BLUE";
+ vso:fuelType dbpedia:Diesel_fuel;
+ vso:engineDisplacement "1995";
+ vso:firstRegistration "2004-03-31".
+
+_:177549183 VehicleID "3343409";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "N";
+ TestResult "ABA";
+ vso:mileageFromOdometer "0";
+ dbpedia:Postal_Code dbpedia:B_postcode_area;
+ gr:hasManufacturer dbpedia:Mini;
+ Model "MINI COOPER";
+ vso:color "YELLOW";
+ vso:fuelType dbpedia:Gasoline;
+ vso:engineDisplacement "1598";
+ vso:firstRegistration "2002-01-08".
+
+_:180153067 VehicleID "10954823";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "N";
+ TestResult "ABA";
+ vso:mileageFromOdometer "0";
+ dbpedia:Postal_Code dbpedia:B_postcode_area;
+ gr:hasManufacturer dbpedia:Bmw;
+ Model "116I SE";
+ vso:color "BLUE";
+ vso:fuelType dbpedia:Gasoline;
+ vso:engineDisplacement "1995";
+ vso:firstRegistration "2005-04-05".
+
+_:217200340 VehicleID "39375694";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "N";
+ TestResult "ABA";
+ vso:mileageFromOdometer "0";
+ dbpedia:Postal_Code dbpedia:B_postcode_area;
+ gr:hasManufacturer dbpedia:Jaguar;
+ Model "X-TYPE V6 SPORT AUTO";
+ vso:color "GREEN";
+ vso:fuelType dbpedia:Gasoline;
+ vso:engineDisplacement "2099";
+ vso:firstRegistration "2002-01-03".
+
+_:48174988 VehicleID "10716768";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "N";
+ TestResult "ABR";
+ vso:mileageFromOdometer "28902";
+ dbpedia:Postal_Code dbpedia:BN_postcode_area;
+ gr:hasManufacturer dbpedia:Bmw;
+ Model "318I SE AUTO";
+ vso:color "GREY";
+ vso:fuelType dbpedia:Gasoline;
+ vso:engineDisplacement "1995";
+ vso:firstRegistration "2007-09-20".
+
+_:110937163 VehicleID "23314179";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "N";
+ TestResult "ABR";
+ vso:mileageFromOdometer "0";
+ dbpedia:Postal_Code dbpedia:B_postcode_area;
+ gr:hasManufacturer dbpedia:Volvo;
+ Model "S40 1.8I";
+ vso:color "SILVER";
+ vso:fuelType dbpedia:Gasoline;
+ vso:engineDisplacement "1731";
+ vso:firstRegistration "1996-09-07".
+
+_:137713276 VehicleID "27670521";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "N";
+ TestResult "ABR";
+ vso:mileageFromOdometer "0";
+ dbpedia:Postal_Code dbpedia:W_postcode_area;
+ gr:hasManufacturer dbpedia:Honda;
+ Model "ACCORD VTEC SE EXEC AUTO";
+ vso:color "BLACK";
+ vso:fuelType dbpedia:Gasoline;
+ vso:engineDisplacement "1997";
+ vso:firstRegistration "2002-04-22".
+
+_:168374622 VehicleID "21095460";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "N";
+ TestResult "ABR";
+ vso:mileageFromOdometer "80793";
+ dbpedia:Postal_Code dbpedia:B_postcode_area;
+ gr:hasManufacturer dbpedia:Renault;
+ Model "CLIO RN";
+ vso:color "GREEN";
+ vso:fuelType dbpedia:Gasoline;
+ vso:engineDisplacement "1149";
+ vso:firstRegistration "1999-12-31".
+
+_:171209476 VehicleID "32853419";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "N";
+ TestResult "ABR";
+ vso:mileageFromOdometer "0";
+ dbpedia:Postal_Code dbpedia:B_postcode_area;
+ gr:hasManufacturer dbpedia:Peugeot;
+ Model "206 LX D";
+ vso:color "GREEN";
+ vso:fuelType dbpedia:Diesel_fuel;
+ vso:engineDisplacement "1868";
+ vso:firstRegistration "1999-09-17".
+
+_:4006901 VehicleID "1195906";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "N";
+ TestResult "F";
+ vso:mileageFromOdometer "88598";
+ dbpedia:Postal_Code dbpedia:BD_postcode_area;
+ gr:hasManufacturer dbpedia:Vauxhall;
+ Model "ZAFIRA ELEGANCE 16V";
+ vso:color "BLACK";
+ vso:fuelType dbpedia:Gasoline;
+ vso:engineDisplacement "1796";
+ vso:firstRegistration "2001-10-18".
+
+_:5467798 VehicleID "1510192";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "N";
+ TestResult "F";
+ vso:mileageFromOdometer "14688";
+ dbpedia:Postal_Code dbpedia:IP_postcode_area;
+ gr:hasManufacturer dbpedia:Renault;
+ Model "KANGOO AUTHENTIQUE DCI 68";
+ vso:color "GREY";
+ vso:fuelType dbpedia:Diesel_fuel;
+ vso:engineDisplacement "1461";
+ vso:firstRegistration "2006-08-03".
+
+_:15495514 VehicleID "3712018";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "N";
+ TestResult "F";
+ vso:mileageFromOdometer "63657";
+ dbpedia:Postal_Code dbpedia:B_postcode_area;
+ gr:hasManufacturer dbpedia:Mercedes;
+ Model "A140 AVANTGARDE";
+ vso:color "SILVER";
+ vso:fuelType dbpedia:Gasoline;
+ vso:engineDisplacement "1397";
+ vso:firstRegistration "2001-12-21".
+
+_:17665129 VehicleID "4147119";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "N";
+ TestResult "F";
+ vso:mileageFromOdometer "62333";
+ dbpedia:Postal_Code dbpedia:PE_postcode_area;
+ gr:hasManufacturer dbpedia:Vauxhall;
+ Model "VECTRA ELEGANCE 16V";
+ vso:color "GREEN";
+ vso:fuelType dbpedia:Gasoline;
+ vso:engineDisplacement "2198";
+ vso:firstRegistration "2002-10-31".
+
+_:25414998 VehicleID "5858945";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "N";
+ TestResult "F";
+ vso:mileageFromOdometer "52753";
+ dbpedia:Postal_Code dbpedia:HA_postcode_area;
+ gr:hasManufacturer dbpedia:Nissan;
+ Model "MICRA S AUTO";
+ vso:color "BLUE";
+ vso:fuelType dbpedia:Gasoline;
+ vso:engineDisplacement "998";
+ vso:firstRegistration "2002-11-15".
+
+_:32477821 VehicleID "7364213";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "N";
+ TestResult "F";
+ vso:mileageFromOdometer "65123";
+ dbpedia:Postal_Code dbpedia:E_postcode_area;
+ gr:hasManufacturer dbpedia:Peugeot;
+ Model "206 CC AUTO";
+ vso:color "BLUE";
+ vso:fuelType dbpedia:Gasoline;
+ vso:engineDisplacement "1587";
+ vso:firstRegistration "2002-09-27".
+
+_:33254700 VehicleID "7525467";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "N";
+ TestResult "F";
+ vso:mileageFromOdometer "125121";
+ dbpedia:Postal_Code dbpedia:B_postcode_area;
+ gr:hasManufacturer dbpedia:Renault;
+ Model "CLIO DYNAMIQUE DCI 65";
+ vso:color "BLACK";
+ vso:fuelType dbpedia:Diesel_fuel;
+ vso:engineDisplacement "1461";
+ vso:firstRegistration "2001-09-14".
+
+_:41462746 VehicleID "9294937";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "N";
+ TestResult "F";
+ vso:mileageFromOdometer "130840";
+ dbpedia:Postal_Code dbpedia:HU_postcode_area;
+ gr:hasManufacturer dbpedia:Lexus;
+ Model "RX300 SE AUTO";
+ vso:color "BLUE";
+ vso:fuelType dbpedia:Gasoline;
+ vso:engineDisplacement "2995";
+ vso:firstRegistration "2001-09-28".
+
+_:57284797 VehicleID "12813271";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "N";
+ TestResult "F";
+ vso:mileageFromOdometer "126983";
+ dbpedia:Postal_Code dbpedia:PR_postcode_area;
+ gr:hasManufacturer dbpedia:Vauxhall;
+ Model "VECTRA LS DTI";
+ vso:color "SILVER";
+ vso:fuelType dbpedia:Diesel_fuel;
+ vso:engineDisplacement "1995";
+ vso:firstRegistration "2002-03-27".
+
+_:57925540 VehicleID "10844075";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "N";
+ TestResult "F";
+ vso:mileageFromOdometer "69504";
+ dbpedia:Postal_Code dbpedia:BB_postcode_area;
+ gr:hasManufacturer dbpedia:Vauxhall;
+ Model "ZAFIRA 16V CLUB";
+ vso:color "GREY";
+ vso:fuelType dbpedia:Gasoline;
+ vso:engineDisplacement "1796";
+ vso:firstRegistration "2001-11-30".
+
+_:60184940 VehicleID "13359871";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "N";
+ TestResult "F";
+ vso:mileageFromOdometer "178300";
+ dbpedia:Postal_Code dbpedia:BD_postcode_area;
+ gr:hasManufacturer dbpedia:Audi;
+ Model "A4 TDI SE";
+ vso:color "GREY";
+ vso:fuelType dbpedia:Diesel_fuel;
+ vso:engineDisplacement "1896";
+ vso:firstRegistration "2001-11-08".
+
+_:60911215 VehicleID "13511819";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "N";
+ TestResult "F";
+ vso:mileageFromOdometer "77424";
+ dbpedia:Postal_Code dbpedia:IP_postcode_area;
+ gr:hasManufacturer dbpedia:Citroen;
+ Model "DISPATCH 1200 HDI 120 LWB";
+ vso:color "WHITE";
+ vso:fuelType dbpedia:Diesel_fuel;
+ vso:engineDisplacement "1997";
+ vso:firstRegistration "2007-11-12".
+
+_:75678476 VehicleID "16627030";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "N";
+ TestResult "F";
+ vso:mileageFromOdometer "0";
+ dbpedia:Postal_Code dbpedia:TW_postcode_area;
+ gr:hasManufacturer dbpedia:Honda;
+ Model "CIVIC ES I-CTDI";
+ vso:color "SILVER";
+ vso:fuelType dbpedia:Diesel_fuel;
+ vso:engineDisplacement "2204";
+ vso:firstRegistration "2006-10-12".
+
+_:75722103 VehicleID "16643283";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "N";
+ TestResult "F";
+ vso:mileageFromOdometer "82606";
+ dbpedia:Postal_Code dbpedia:TW_postcode_area;
+ gr:hasManufacturer dbpedia:Toyota;
+ Model "COROLLA T2 VVTI";
+ vso:color "SILVER";
+ vso:fuelType dbpedia:Gasoline;
+ vso:engineDisplacement "1398";
+ vso:firstRegistration "2002-07-16".
+
+_:75942184 VehicleID "16674952";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "N";
+ TestResult "F";
+ vso:mileageFromOdometer "76971";
+ dbpedia:Postal_Code dbpedia:E_postcode_area;
+ gr:hasManufacturer dbpedia:Volkswagen;
+ Model "SHARAN SL TDI AUTO";
+ vso:color "SILVER";
+ vso:fuelType dbpedia:Diesel_fuel;
+ vso:engineDisplacement "1896";
+ vso:firstRegistration "2004-04-02".
+
+_:103515090 VehicleID "21994225";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "N";
+ TestResult "F";
+ vso:mileageFromOdometer "79722";
+ dbpedia:Postal_Code dbpedia:OL_postcode_area;
+ gr:hasManufacturer dbpedia:Vauxhall;
+ Model "VIVARO 2700 DTI SWB";
+ vso:color "WHITE";
+ vso:fuelType dbpedia:Gasoline;
+ vso:engineDisplacement "1870";
+ vso:firstRegistration "2004-11-25".
+
+_:90649730 VehicleID "19592748";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "N";
+ TestResult "F";
+ vso:mileageFromOdometer "187211";
+ dbpedia:Postal_Code dbpedia:CW_postcode_area;
+ gr:hasManufacturer dbpedia:Volvo;
+ Model "960 24V AUTO";
+ vso:color "GREEN";
+ vso:fuelType dbpedia:Gasoline;
+ vso:engineDisplacement "2922";
+ vso:firstRegistration "1995-09-02".
+
+_:96541999 VehicleID "20664371";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "N";
+ TestResult "F";
+ vso:mileageFromOdometer "111281";
+ dbpedia:Postal_Code dbpedia:OL_postcode_area;
+ gr:hasManufacturer dbpedia:Vauxhall;
+ Model "VECTRA GLS 16V";
+ vso:color "BLUE";
+ vso:fuelType dbpedia:Gasoline;
+ vso:engineDisplacement "1799";
+ vso:firstRegistration "1996-01-04".
+
+_:97081763 VehicleID "20763174";
+ TestDate "2011-01-01";
+ TestClassID "4";
+ TestType "N";
+ TestResult "F";
+ vso:mileageFromOdometer "175417";
+ dbpedia:Postal_Code dbpedia:CM_postcode_area;
+ gr:hasManufacturer dbpedia:Citroen;
+ Model "XANTIA VSX TD";
+ vso:color "RED";
+ vso:fuelType dbpedia:Diesel_fuel;
+ vso:engineDisplacement "1905";
+ vso:firstRegistration "1995-08-01".
+
