@@ -1,0 +1,47 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix vso:     <http://purl.org/vso/ns#> .
+
+# Placeholder for our MOT vocab
+@prefix mot:    <http://vocab.inf.ed.ac.uk/> .
+
+# Define a class for an MOT Test
+mot:Test    rdf:type    rdfs:Class ;
+    rdfs:label "MOT Test" ;
+    rdfs:comment """Defines an MOT Test result.""" .
+
+mot:testid  rdf:type    rdf:Property .
+mot:testid  rdfs:range  xsd:integer .
+mot:testid  rdfs:domain mot:Test .
+
+mot:testvehicle  rdf:type    rdf:Property .
+mot:testvehicle  rdfs:range  mot:Vehicle .
+mot:testvehicle  rdfs:domain mot:Test .
+
+mot:testdate    rdf:type    rdf:Property .
+mot:testdate    rdfs:range  xsd:date .
+mot:testdate    rdfs:domain mot:Test .
+
+mot:testtype    rdf:type    rdf:Property .
+mot:testtype    rdfs:range  xsd:string .
+mot:testtype    rdfs:domain mot:Test .
+
+mot:testresult    rdf:type    rdf:Property .
+mot:testresult    rdfs:range  xsd:string .
+mot:testresult    rdfs:domain mot:Test .
+
+mot:testlocation    rdf:type    rdf:Property .
+mot:testlocation    rdfs:range  xsd:string .
+mot:testlocation    rdfs:domain mot:Test .
+
+
+# Define a class for a vehicle
+mot:Vehicle rdf:type    rdfs:Class ;
+    rdfs:subClassOf vso:MotorizedRoadVehicle
+    rdfs:label  "Vehicle tested by MOT" ;
+    rdfs:comment    """Defines a vehicle which has been tested in an MOT Test - a sublass of the vso: MotorizedRoadVehicle""" .
+    
+mot:vehicleid  rdf:type    rdf:Property .
+mot:vehicleid  rdfs:range  xsd:integer .
+mot:vehicleid  rdfs:domain mot:Vehicle .
