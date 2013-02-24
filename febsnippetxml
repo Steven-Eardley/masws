@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:mot="http://vocab.inf.ed.ac.uk/mot/" xmlns:dbpedia="http://dbpedia.org/resource/" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:vso="http://www.heppnetz.de/ontologies/vso/ns#" xmlns:gr="http://purl.org/goodrelations/v1#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<mot:Test>
+		<mot:testid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">72538084</mot:testid>
+		<mot:testvehicle>
+			<mot:Vehicle>
+				<vso:mileageFromOdometer>
+					<gr:QuantitativeValueFloat>
+						<gr:hasValueFloat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13463</gr:hasValueFloat>
+						<gr:hasUnitOfMeasurement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SMI</gr:hasUnitOfMeasurement>
+					</gr:QuantitativeValueFloat>
+				</vso:mileageFromOdometer>
+				<mot:vehicleid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15988135</mot:vehicleid>
+				<gr:hasManufacturer rdf:resource="http://dbpedia.org/resource/Piaggio" />
+				<mot:vehiclemodel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CARNABY</mot:vehiclemodel>
+				<vso:color>BLACK</vso:color>
+				<vso:fuelType rdf:resource="http://dbpedia.org/resource/Gasoline" />
+				<vso:engineDisplacement>
+					<gr:QuantitativeValueFloat>
+						<gr:hasValueFloat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">124</gr:hasValueFloat>
+						<gr:hasUnitOfMeasurement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CMQ</gr:hasUnitOfMeasurement>
+					</gr:QuantitativeValueFloat>
+				</vso:engineDisplacement>
+				<vso:firstRegistration rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2007-12-05</vso:firstRegistration>
+			</mot:Vehicle>
+		</mot:testvehicle>
+		<mot:testdate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-02-01</mot:testdate>
+		<mot:testclassid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</mot:testclassid>
+		<mot:testtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</mot:testtype>
+		<mot:testresult rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ABR</mot:testresult>
+		<mot:testlocation rdf:resource="http://dbpedia.org/resource/KT_postcode_area" />
+	</mot:Test>
+	<mot:Test>
+		<mot:testid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">174159701</mot:testid>
+		<mot:testvehicle>
+			<mot:Vehicle>
+				<vso:mileageFromOdometer>
+					<gr:QuantitativeValueFloat>
+						<gr:hasValueFloat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">30824</gr:hasValueFloat>
+						<gr:hasUnitOfMeasurement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SMI</gr:hasUnitOfMeasurement>
+					</gr:QuantitativeValueFloat>
+				</vso:mileageFromOdometer>
+				<mot:vehicleid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">33237857</mot:vehicleid>
+				<gr:hasManufacturer rdf:resource="http://dbpedia.org/resource/Kymco" />
+				<mot:vehiclemodel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZING</mot:vehiclemodel>
+				<vso:color>RED</vso:color>
+				<vso:fuelType rdf:resource="http://dbpedia.org/resource/Gasoline" />
+				<vso:engineDisplacement>
+					<gr:QuantitativeValueFloat>
+						<gr:hasValueFloat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">125</gr:hasValueFloat>
+						<gr:hasUnitOfMeasurement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CMQ</gr:hasUnitOfMeasurement>
+					</gr:QuantitativeValueFloat>
+				</vso:engineDisplacement>
+				<vso:firstRegistration rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-02-17</vso:firstRegistration>
+			</mot:Vehicle>
+		</mot:testvehicle>
+		<mot:testdate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-02-01</mot:testdate>
+		<mot:testclassid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</mot:testclassid>
+		<mot:testtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</mot:testtype>
+		<mot:testresult rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</mot:testresult>
+		<mot:testlocation rdf:resource="http://dbpedia.org/resource/WN_postcode_area" />
+	</mot:Test>
+	<mot:Test>
+		<mot:testid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">216778770</mot:testid>
+		<mot:testvehicle>
+			<mot:Vehicle>
+				<vso:mileageFromOdometer>
+					<gr:QuantitativeValueFloat>
+						<gr:hasValueFloat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13399</gr:hasValueFloat>
+						<gr:hasUnitOfMeasurement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SMI</gr:hasUnitOfMeasurement>
+					</gr:QuantitativeValueFloat>
+				</vso:mileageFromOdometer>
+				<mot:vehicleid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">39294156</mot:vehicleid>
+				<gr:hasManufacturer rdf:resource="http://dbpedia.org/resource/Peugeot" />
+				<mot:vehiclemodel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VIVACITY 50</mot:vehiclemodel>
+				<vso:color>GREEN</vso:color>
+				<vso:fuelType rdf:resource="http://dbpedia.org/resource/Gasoline" />
+				<vso:engineDisplacement>
+					<gr:QuantitativeValueFloat>
+						<gr:hasValueFloat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">49</gr:hasValueFloat>
+						<gr:hasUnitOfMeasurement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CMQ</gr:hasUnitOfMeasurement>
+					</gr:QuantitativeValueFloat>
+				</vso:engineDisplacement>
+				<vso:firstRegistration rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-02-01</vso:firstRegistration>
+			</mot:Vehicle>
+		</mot:testvehicle>
+		<mot:testdate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-02-01</mot:testdate>
+		<mot:testclassid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</mot:testclassid>
+		<mot:testtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</mot:testtype>
+		<mot:testresult rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</mot:testresult>
+		<mot:testlocation rdf:resource="http://dbpedia.org/resource/CB_postcode_area" />
+	</mot:Test>
+</rdf:RDF>
+

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="Generator" content="Kate, the KDE Advanced Text Editor" />
+<title>rdfConverter.java</title>
+</head>
+<body>
+<pre style='color:#1f1c1b;background-color:#ffffff;'>
+<i><span style='color:#898887;'>/* MASWS Assignment 2</span></i>
+<i><span style='color:#898887;'>Diljá Rudolfsdóttir &amp; Steven Eardley 2013</span></i>
+<i><span style='color:#898887;'>*/</span></i>
+
+<b>import</b><span style='color:#808000;'> java.io.*;</span>
+<b>import</b><span style='color:#808000;'> java.util.*;</span>
+
+<b>public</b> <b>class</b> rdfConverter{
+
+<b>public</b> <span style='color:#0057ae;'>static</span> <span style='color:#0057ae;'>void</span> <span style='color:#644a9b;'>main</span>(<b><span style='color:#0095ff;'>String</span></b> args[]) {
+    <b>try</b>{
+
+        <b><span style='color:#0095ff;'>FileInputStream</span></b> fstream = <b>new</b> <b><span style='color:#0095ff;'>FileInputStream</span></b>(args[<span style='color:#b08000;'>0</span>]);
+        
+        <b><span style='color:#0095ff;'>BufferedReader</span></b> br = <b>new</b> <b><span style='color:#0095ff;'>BufferedReader</span></b>(<b>new</b> <b><span style='color:#0095ff;'>InputStreamReader</span></b>(fstream));
+        <b><span style='color:#0095ff;'>String</span></b> strLine;
+        
+        <b><span style='color:#0095ff;'>FileWriter</span></b> fstream3 = <b>new</b> <b><span style='color:#0095ff;'>FileWriter</span></b>(<span style='color:#bf0303;'>&quot;RDF-Output.ttl&quot;</span>, <b>false</b>);
+        <b><span style='color:#0095ff;'>BufferedWriter</span></b> out = <b>new</b> <b><span style='color:#0095ff;'>BufferedWriter</span></b>(fstream3);
+        
+        out.<span style='color:#644a9b;'>write</span>(<span style='color:#bf0303;'>&quot;@prefix dbpedia: &lt;http://dbpedia.org/resource/&gt; .</span><span style='color:#924c9d;'>\n</span><span style='color:#bf0303;'>&quot;</span>);
+        out.<span style='color:#644a9b;'>write</span>(<span style='color:#bf0303;'>&quot;@prefix vso: &lt;http://www.heppnetz.de/ontologies/vso/ns#&gt; .</span><span style='color:#924c9d;'>\n</span><span style='color:#bf0303;'>&quot;</span>);
+        out.<span style='color:#644a9b;'>write</span>(<span style='color:#bf0303;'>&quot;@prefix gr:  &lt;http://purl.org/goodrelations/v1#&gt; .</span><span style='color:#924c9d;'>\n</span><span style='color:#bf0303;'>&quot;</span>);
+        out.<span style='color:#644a9b;'>write</span>(<span style='color:#bf0303;'>&quot;@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .</span><span style='color:#924c9d;'>\n</span><span style='color:#bf0303;'>&quot;</span>);
+        out.<span style='color:#644a9b;'>write</span>(<span style='color:#bf0303;'>&quot;@prefix mot: &lt;http://vocab.inf.ed.ac.uk/mot&gt; .</span><span style='color:#924c9d;'>\n\n</span><span style='color:#bf0303;'>&quot;</span>);
+
+        <b>while</b> (((strLine = br.<span style='color:#644a9b;'>readLine</span>()) != <b>null</b>)) {
+            <b><span style='color:#0095ff;'>String</span></b> [] objects = strLine.<span style='color:#644a9b;'>split</span>(<span style='color:#bf0303;'>&quot;</span><span style='color:#924c9d;'>\\</span><span style='color:#bf0303;'>|&quot;</span>);
+            
+            <i><span style='color:#898887;'>// Create a class for the Test</span></i>
+            out.<span style='color:#644a9b;'>write</span>(<b><span style='color:#0095ff;'>String</span></b><span style='color:#644a9b;'>.format</span>(<span style='color:#bf0303;'>&quot;</span><span style='color:#bf0303;'>_:</span><span style='color:#924c9d;'>%s</span><span style='color:#bf0303;'> a mot:Test ;</span><span style='color:#924c9d;'>\n</span><span style='color:#bf0303;'>&quot;</span>, objects[<span style='color:#b08000;'>0</span>]));
+
+            <i><span style='color:#898887;'>// Add test properties</span></i>
+            out.<span style='color:#644a9b;'>write</span>(<b><span style='color:#0095ff;'>String</span></b><span style='color:#644a9b;'>.format</span>(<span style='color:#bf0303;'>&quot;</span><span style='color:#924c9d;'>\t</span><span style='color:#bf0303;'>mot:testid </span><span style='color:#924c9d;'>\&quot;%s\&quot;</span><span style='color:#bf0303;'>^^xsd:integer ;</span><span style='color:#924c9d;'>\n</span><span style='color:#bf0303;'>&quot;</span>, objects[<span style='color:#b08000;'>0</span>]));
+            
+            out.<span style='color:#644a9b;'>write</span>(<b><span style='color:#0095ff;'>String</span></b><span style='color:#644a9b;'>.format</span>(<span style='color:#bf0303;'>&quot;</span><span style='color:#924c9d;'>\t</span><span style='color:#bf0303;'>mot:testvehicle _:</span><span style='color:#924c9d;'>%s</span><span style='color:#bf0303;'> ;</span><span style='color:#924c9d;'>\n</span><span style='color:#bf0303;'>&quot;</span>, objects[<span style='color:#b08000;'>1</span>]));
+
+            out.<span style='color:#644a9b;'>write</span>(<b><span style='color:#0095ff;'>String</span></b><span style='color:#644a9b;'>.format</span>(<span style='color:#bf0303;'>&quot;</span><span style='color:#924c9d;'>\t</span><span style='color:#bf0303;'>mot:testdate </span><span style='color:#924c9d;'>\&quot;%s\&quot;</span><span style='color:#bf0303;'>^^xsd:date ;</span><span style='color:#924c9d;'>\n</span><span style='color:#bf0303;'>&quot;</span>, objects[<span style='color:#b08000;'>2</span>]));
+            
+            out.<span style='color:#644a9b;'>write</span>(<b><span style='color:#0095ff;'>String</span></b><span style='color:#644a9b;'>.format</span>(<span style='color:#bf0303;'>&quot;</span><span style='color:#924c9d;'>\t</span><span style='color:#bf0303;'>mot:testclassid </span><span style='color:#924c9d;'>\&quot;%s\&quot;</span><span style='color:#bf0303;'>^^xsd:string ;</span><span style='color:#924c9d;'>\n</span><span style='color:#bf0303;'>&quot;</span>, objects[<span style='color:#b08000;'>3</span>]));
+            
+            out.<span style='color:#644a9b;'>write</span>(<b><span style='color:#0095ff;'>String</span></b><span style='color:#644a9b;'>.format</span>(<span style='color:#bf0303;'>&quot;</span><span style='color:#924c9d;'>\t</span><span style='color:#bf0303;'>mot:testtype </span><span style='color:#924c9d;'>\&quot;%s\&quot;</span><span style='color:#bf0303;'>^^xsd:string ;</span><span style='color:#924c9d;'>\n</span><span style='color:#bf0303;'>&quot;</span>, objects[<span style='color:#b08000;'>4</span>]));
+
+            out.<span style='color:#644a9b;'>write</span>(<b><span style='color:#0095ff;'>String</span></b><span style='color:#644a9b;'>.format</span>(<span style='color:#bf0303;'>&quot;</span><span style='color:#924c9d;'>\t</span><span style='color:#bf0303;'>mot:testresult </span><span style='color:#924c9d;'>\&quot;%s\&quot;</span><span style='color:#bf0303;'>^^xsd:string ;</span><span style='color:#924c9d;'>\n</span><span style='color:#bf0303;'>&quot;</span>, objects[<span style='color:#b08000;'>5</span>]));
+                             
+            out.<span style='color:#644a9b;'>write</span>(<b><span style='color:#0095ff;'>String</span></b><span style='color:#644a9b;'>.format</span>(<span style='color:#bf0303;'>&quot;</span><span style='color:#924c9d;'>\t</span><span style='color:#bf0303;'>mot:testlocation dbpedia:</span><span style='color:#924c9d;'>%s</span><span style='color:#bf0303;'>_postcode_area .</span><span style='color:#924c9d;'>\n</span><span style='color:#bf0303;'>&quot;</span>, objects[<span style='color:#b08000;'>7</span>]));
+             
+            <i><span style='color:#898887;'>// Create a class for the vehicle</span></i>
+            out.<span style='color:#644a9b;'>write</span>(<b><span style='color:#0095ff;'>String</span></b><span style='color:#644a9b;'>.format</span>(<span style='color:#bf0303;'>&quot;</span><span style='color:#bf0303;'>_:</span><span style='color:#924c9d;'>%s</span><span style='color:#bf0303;'> a mot:Vehicle ;</span><span style='color:#924c9d;'>\n</span><span style='color:#bf0303;'>&quot;</span>, objects[<span style='color:#b08000;'>1</span>]));
+            
+            out.<span style='color:#644a9b;'>write</span>(<b><span style='color:#0095ff;'>String</span></b><span style='color:#644a9b;'>.format</span>(<span style='color:#bf0303;'>&quot;</span><span style='color:#924c9d;'>\t</span><span style='color:#bf0303;'>vso:mileageFromOdometer [ a gr:QuantitativeValueFloat ;</span><span style='color:#924c9d;'>\n\t\t</span><span style='color:#bf0303;'>gr:hasValueFloat </span><span style='color:#924c9d;'>\&quot;%s\&quot;</span><span style='color:#bf0303;'>^^xsd:float ;</span><span style='color:#924c9d;'>\n\t\t</span><span style='color:#bf0303;'>gr:hasUnitOfMeasurement </span><span style='color:#924c9d;'>\&quot;</span><span style='color:#bf0303;'>SMI</span><span style='color:#924c9d;'>\&quot;</span><span style='color:#bf0303;'>^^xsd:string] ;</span><span style='color:#924c9d;'>\n</span><span style='color:#bf0303;'>&quot;</span>, objects[<span style='color:#b08000;'>6</span>]));
+            
+            out.<span style='color:#644a9b;'>write</span>(<b><span style='color:#0095ff;'>String</span></b><span style='color:#644a9b;'>.format</span>(<span style='color:#bf0303;'>&quot;</span><span style='color:#924c9d;'>\t</span><span style='color:#bf0303;'>mot:vehicleid </span><span style='color:#924c9d;'>\&quot;%s\&quot;</span><span style='color:#bf0303;'>^^xsd:integer ;</span><span style='color:#924c9d;'>\n</span><span style='color:#bf0303;'>&quot;</span>, objects[<span style='color:#b08000;'>1</span>]));
+            
+            out.<span style='color:#644a9b;'>write</span>(<b><span style='color:#0095ff;'>String</span></b><span style='color:#644a9b;'>.format</span>(<span style='color:#bf0303;'>&quot;</span><span style='color:#924c9d;'>\t</span><span style='color:#bf0303;'>gr:hasManufacturer dbpedia:</span><span style='color:#924c9d;'>%s</span><span style='color:#bf0303;'> ;</span><span style='color:#924c9d;'>\n</span><span style='color:#bf0303;'>&quot;</span>, (objects[<span style='color:#b08000;'>8</span>].<span style='color:#644a9b;'>charAt</span>(<span style='color:#b08000;'>0</span>)) + objects[<span style='color:#b08000;'>8</span>].<span style='color:#644a9b;'>substring</span>(<span style='color:#b08000;'>1</span>).<span style='color:#644a9b;'>toLowerCase</span>()));
+
+            out.<span style='color:#644a9b;'>write</span>(<b><span style='color:#0095ff;'>String</span></b><span style='color:#644a9b;'>.format</span>(<span style='color:#bf0303;'>&quot;</span><span style='color:#924c9d;'>\t</span><span style='color:#bf0303;'>mot:vehiclemodel </span><span style='color:#924c9d;'>\&quot;%s\&quot;</span><span style='color:#bf0303;'>^^xsd:string ;</span><span style='color:#924c9d;'>\n</span><span style='color:#bf0303;'>&quot;</span>, objects[<span style='color:#b08000;'>9</span>]));
+            
+            out.<span style='color:#644a9b;'>write</span>(<b><span style='color:#0095ff;'>String</span></b><span style='color:#644a9b;'>.format</span>(<span style='color:#bf0303;'>&quot;</span><span style='color:#924c9d;'>\t</span><span style='color:#bf0303;'>vso:color </span><span style='color:#924c9d;'>\&quot;%s\&quot;</span><span style='color:#bf0303;'> ;</span><span style='color:#924c9d;'>\n</span><span style='color:#bf0303;'>&quot;</span>, objects[<span style='color:#b08000;'>10</span>]));
+
+            <b><span style='color:#0095ff;'>String</span></b> fuelType;
+            <span style='color:#0057ae;'>char</span> sw = objects[<span style='color:#b08000;'>11</span>].<span style='color:#644a9b;'>charAt</span>(<span style='color:#b08000;'>0</span>);
+            <b>switch</b> (sw) {
+                <b>case</b> <span style='color:#924c9d;'>'P'</span>:  fuelType = <span style='color:#bf0303;'>&quot;dbpedia:Gasoline&quot;</span>;
+                        <b>break</b>;
+                <b>case</b> <span style='color:#924c9d;'>'D'</span>:  fuelType = <span style='color:#bf0303;'>&quot;dbpedia:Diesel_fuel&quot;</span>;
+                        <b>break</b>;
+                <b>case</b> <span style='color:#924c9d;'>'E'</span>:  fuelType = <span style='color:#bf0303;'>&quot;dbpedia:Electricity&quot;</span>;
+                        <b>break</b>;
+                <b>case</b> <span style='color:#924c9d;'>'S'</span>:  fuelType = <span style='color:#bf0303;'>&quot;dbpedia:Steam&quot;</span>;
+                        <b>break</b>;
+                <b>case</b> <span style='color:#924c9d;'>'N'</span>:  fuelType = <span style='color:#bf0303;'>&quot;dbpedia:Liquefied_natural_gas&quot;</span>;
+                        <b>break</b>;                        
+                <b>case</b> <span style='color:#924c9d;'>'F'</span>:  fuelType = <span style='color:#bf0303;'>&quot;dbpedia:Fuel_cell&quot;</span>;
+                        <b>break</b>;
+                <b>case</b> <span style='color:#924c9d;'>'C'</span>:  fuelType = <span style='color:#bf0303;'>&quot;dbpedia:Compressed_natural_gas&quot;</span>;
+                        <b>break</b>;
+                <b>case</b> <span style='color:#924c9d;'>'L'</span>:  fuelType = <span style='color:#bf0303;'>&quot;dbpedia:Liquefied_petroleum_gas&quot;</span>;
+                        <b>break</b>;
+                <b>case</b> <span style='color:#924c9d;'>'O'</span>:  fuelType = <span style='color:#bf0303;'>&quot;Other&quot;</span>;
+                        <b>break</b>;                        
+                <b>default</b>: fuelType = <span style='color:#bf0303;'>&quot;None Found&quot;</span>;
+                        <b>break</b>;
+            }
+            out.<span style='color:#644a9b;'>write</span>(<b><span style='color:#0095ff;'>String</span></b><span style='color:#644a9b;'>.format</span>(<span style='color:#bf0303;'>&quot;</span><span style='color:#924c9d;'>\t</span><span style='color:#bf0303;'>vso:fuelType </span><span style='color:#924c9d;'>%s</span><span style='color:#bf0303;'> ;</span><span style='color:#924c9d;'>\n</span><span style='color:#bf0303;'>&quot;</span>, fuelType));
+
+            out.<span style='color:#644a9b;'>write</span>(<b><span style='color:#0095ff;'>String</span></b><span style='color:#644a9b;'>.format</span>(<span style='color:#bf0303;'>&quot;</span><span style='color:#924c9d;'>\t</span><span style='color:#bf0303;'>vso:engineDisplacement [ a gr:QuantitativeValueFloat ;</span><span style='color:#924c9d;'>\n\t\t</span><span style='color:#bf0303;'>gr:hasValueFloat </span><span style='color:#924c9d;'>\&quot;%s\&quot;</span><span style='color:#bf0303;'>^^xsd:float ;</span><span style='color:#924c9d;'>\n\t\t</span><span style='color:#bf0303;'>gr:hasUnitOfMeasurement </span><span style='color:#924c9d;'>\&quot;</span><span style='color:#bf0303;'>CMQ</span><span style='color:#924c9d;'>\&quot;</span><span style='color:#bf0303;'>^^xsd:string ] ;</span><span style='color:#924c9d;'>\n</span><span style='color:#bf0303;'>&quot;</span>, objects[<span style='color:#b08000;'>12</span>]));
+                             
+            out.<span style='color:#644a9b;'>write</span>(<b><span style='color:#0095ff;'>String</span></b><span style='color:#644a9b;'>.format</span>(<span style='color:#bf0303;'>&quot;</span><span style='color:#924c9d;'>\t</span><span style='color:#bf0303;'>vso:firstRegistration </span><span style='color:#924c9d;'>\&quot;%s\&quot;</span><span style='color:#bf0303;'>^^xsd:date .</span><span style='color:#924c9d;'>\n\n</span><span style='color:#bf0303;'>&quot;</span>, objects[<span style='color:#b08000;'>13</span>]));
+        }
+        <b><span style='color:#0095ff;'>System</span></b>.<span style='color:#644a9b;'>out</span>.<span style='color:#644a9b;'>println</span>(<span style='color:#bf0303;'>&quot;</span><span style='color:#924c9d;'>\n</span><span style='color:#bf0303;'>Success! Written to RDF-Output.ttl</span><span style='color:#924c9d;'>\n</span><span style='color:#bf0303;'>&quot;</span>);
+        out.<span style='color:#644a9b;'>close</span>();
+        fstream.<span style='color:#644a9b;'>close</span>();
+    }
+    
+    <b>catch</b> (<b><span style='color:#0095ff;'>Exception</span></b> e) {<i><span style='color:#898887;'>// Catch exception if any</span></i>
+    <b><span style='color:#0095ff;'>System</span></b>.<span style='color:#644a9b;'>err</span>.<span style='color:#644a9b;'>println</span>(<span style='color:#bf0303;'>&quot;Error: &quot;</span> + e.<span style='color:#644a9b;'>getMessage</span>());
+    }
+    }
+}
+</pre>
+</body>
+</html>

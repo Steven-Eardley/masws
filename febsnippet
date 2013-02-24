@@ -1,0 +1,72 @@
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix vso: <http://www.heppnetz.de/ontologies/vso/ns#> .
+@prefix gr:  <http://purl.org/goodrelations/v1#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix mot: <http://vocab.inf.ed.ac.uk/mot/> .
+
+_:72538084 a mot:Test ;
+        mot:testid "72538084"^^xsd:integer ;
+        mot:testvehicle _:15988135 ;
+        mot:testdate "2011-02-01"^^xsd:date ;
+        mot:testclassid "1"^^xsd:string ;
+        mot:testtype "F"^^xsd:string ;
+        mot:testresult "ABR"^^xsd:string ;
+        mot:testlocation dbpedia:KT_postcode_area .
+_:15988135 a mot:Vehicle ;
+        vso:mileageFromOdometer [ a gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "13463"^^xsd:float ;
+                gr:hasUnitOfMeasurement "SMI"^^xsd:string] ;
+        mot:vehicleid "15988135"^^xsd:integer ;
+        gr:hasManufacturer dbpedia:Piaggio ;
+        mot:vehiclemodel "CARNABY"^^xsd:string ;
+        vso:color "BLACK" ;
+        vso:fuelType dbpedia:Gasoline ;
+        vso:engineDisplacement [ a gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "124"^^xsd:float ;
+                gr:hasUnitOfMeasurement "CMQ"^^xsd:string ] ;
+        vso:firstRegistration "2007-12-05"^^xsd:date .
+
+
+_:174159701 a mot:Test ;
+        mot:testid "174159701"^^xsd:integer ;
+        mot:testvehicle _:33237857 ;
+        mot:testdate "2011-02-01"^^xsd:date ;
+        mot:testclassid "1"^^xsd:string ;
+        mot:testtype "F"^^xsd:string ;
+        mot:testresult "F"^^xsd:string ;
+        mot:testlocation dbpedia:WN_postcode_area .
+_:33237857 a mot:Vehicle ;
+        vso:mileageFromOdometer [ a gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "30824"^^xsd:float ;
+                gr:hasUnitOfMeasurement "SMI"^^xsd:string] ;
+        mot:vehicleid "33237857"^^xsd:integer ;
+        gr:hasManufacturer dbpedia:Kymco ;
+        mot:vehiclemodel "ZING"^^xsd:string ;
+        vso:color "RED" ;
+        vso:fuelType dbpedia:Gasoline ;
+        vso:engineDisplacement [ a gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "125"^^xsd:float ;
+                gr:hasUnitOfMeasurement "CMQ"^^xsd:string ] ;
+        vso:firstRegistration "2000-02-17"^^xsd:date .
+
+_:216778770 a mot:Test ;
+        mot:testid "216778770"^^xsd:integer ;
+        mot:testvehicle _:39294156 ;
+        mot:testdate "2011-02-01"^^xsd:date ;
+        mot:testclassid "1"^^xsd:string ;
+        mot:testtype "F"^^xsd:string ;
+        mot:testresult "F"^^xsd:string ;
+        mot:testlocation dbpedia:CB_postcode_area .
+_:39294156 a mot:Vehicle ;
+        vso:mileageFromOdometer [ a gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "13399"^^xsd:float ;
+                gr:hasUnitOfMeasurement "SMI"^^xsd:string] ;
+        mot:vehicleid "39294156"^^xsd:integer ;
+        gr:hasManufacturer dbpedia:Peugeot ;
+        mot:vehiclemodel "VIVACITY 50"^^xsd:string ;
+        vso:color "GREEN" ;
+        vso:fuelType dbpedia:Gasoline ;
+        vso:engineDisplacement [ a gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "49"^^xsd:float ;
+                gr:hasUnitOfMeasurement "CMQ"^^xsd:string ] ;
+        vso:firstRegistration "2003-02-01"^^xsd:date .

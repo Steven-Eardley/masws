@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="Generator" content="Kate, the KDE Advanced Text Editor" />
+<title>motDef</title>
+</head>
+<body>
+<pre style='color:#1f1c1b;background-color:#ffffff;'>
+<i><span style='color:#898887;'># MASWS Assignment 2</span></i>
+<i><span style='color:#898887;'># Diljá Rudolfsdóttir &amp; Steven Eardley 2013</span></i>
+
+@prefix rdf:    <b><span style='color:#223388;'>&lt;</span></b>http://www.w3.org/1999/02/22-rdf-syntax-ns#<b><span style='color:#223388;'>&gt;</span></b> .
+@prefix rdfs:   <b><span style='color:#223388;'>&lt;</span></b>http://www.w3.org/2000/01/rdf-schema#<b><span style='color:#223388;'>&gt;</span></b> .
+@prefix xsd:    <b><span style='color:#223388;'>&lt;</span></b>http://www.w3.org/2001/XMLSchema#<b><span style='color:#223388;'>&gt;</span></b> .
+@prefix vso:    <b><span style='color:#223388;'>&lt;</span></b>http://purl.org/vso/ns#<b><span style='color:#223388;'>&gt;</span></b> .
+@prefix sch:    <b><span style='color:#223388;'>&lt;</span></b>http://schema.org/<b><span style='color:#223388;'>&gt;</span></b> .
+
+<i><span style='color:#898887;'># Placeholder for our MOT vocab</span></i>
+@prefix mot:    <b><span style='color:#223388;'>&lt;</span></b>http://vocab.inf.ed.ac.uk/mot<b><span style='color:#223388;'>&gt;</span></b> .
+
+<i><span style='color:#898887;'># Define a class for an MOT Test</span></i>
+mot:Test    rdf:type    rdfs:Class ;
+    rdfs:label <span style='color:#bf0303;'>&quot;MOT Test&quot;</span> ;
+    rdfs:comment <span style='color:#bf0303;'>&quot;&quot;&quot;Defines an MOT Test result.&quot;&quot;&quot;</span> .
+
+mot:testid  rdf:type    rdf:Property .
+mot:testid  rdfs:range  xsd:integer .
+mot:testid  rdfs:domain mot:Test .
+
+mot:testvehicle  rdf:type    rdf:Property .
+mot:testvehicle  rdfs:range  mot:Vehicle .
+mot:testvehicle  rdfs:domain mot:Test .
+
+mot:testdate    rdf:type    rdf:Property .
+mot:testdate    rdfs:range  xsd:date .
+mot:testdate    rdfs:domain mot:Test .
+
+mot:testclassid    rdf:type    rdf:Property .
+mot:testclassid    rdfs:range  xsd:string .
+mot:testclassid    rdfs:domain mot:Test .
+
+mot:testtype    rdf:type    rdf:Property .
+mot:testtype    rdfs:range  xsd:string .
+mot:testtype    rdfs:domain mot:Test .
+
+mot:testresult    rdf:type    rdf:Property .
+mot:testresult    rdfs:range  xsd:string .
+mot:testresult    rdfs:domain mot:Test .
+
+mot:testlocation    rdf:type    rdf:Property .
+mot:testlocation    rdfs:range  sch:AdministrativeArea .
+mot:testlocation    rdfs:domain mot:Test .
+
+
+<i><span style='color:#898887;'># Define a class for a vehicle</span></i>
+mot:Vehicle rdf:type    rdfs:Class ;
+    rdfs:subClassOf vso:MotorizedRoadVehicle
+    rdfs:label  <span style='color:#bf0303;'>&quot;Vehicle tested by MOT&quot;</span> ;
+    rdfs:comment    <span style='color:#bf0303;'>&quot;&quot;&quot;Defines a vehicle which has been tested in an MOT Test - a sublass of the vso: MotorizedRoadVehicle&quot;&quot;&quot;</span> .
+    
+mot:vehicleid  rdf:type    rdf:Property .
+mot:vehicleid  rdfs:range  xsd:integer .
+mot:vehicleid  rdfs:domain mot:Vehicle .
+
+mot:vehiclemodel    rdf:type    rdf:Property .
+mot:vehiclemodel    rdfs:range  xsd:string .
+mot:vehiclemodel    rdfs:domain mot:Vehicle .</pre>
+</body>
+</html>

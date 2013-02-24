@@ -8,7 +8,7 @@
 @prefix sch:    <http://schema.org/> .
 
 # Placeholder for our MOT vocab
-@prefix mot:    <http://vocab.inf.ed.ac.uk/mot> .
+@prefix mot:    <http://vocab.inf.ed.ac.uk/mot/> .
 
 # Define a class for an MOT Test
 mot:Test    rdf:type    rdfs:Class ;
@@ -46,7 +46,7 @@ mot:testlocation    rdfs:domain mot:Test .
 
 # Define a class for a vehicle
 mot:Vehicle rdf:type    rdfs:Class ;
-    rdfs:subClassOf vso:MotorizedRoadVehicle
+    rdfs:subClassOf vso:MotorizedRoadVehicle ;
     rdfs:label  "Vehicle tested by MOT" ;
     rdfs:comment    """Defines a vehicle which has been tested in an MOT Test - a sublass of the vso: MotorizedRoadVehicle""" .
     
