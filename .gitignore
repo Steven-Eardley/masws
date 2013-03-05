@@ -1,3 +1,5 @@
+twinkle/*
+*.ttl
 *.class
 *~
 .~*
