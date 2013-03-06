@@ -52,7 +52,7 @@ public static void main(String args[]) {
             
             out.write(String.format("\tmot:vehicleid \"%s\"^^xsd:integer ;\n", objects[1]));
             
-            out.write(String.format("\tgr:hasManufacturer dbpedia:%s ;\n", (objects[8].charAt(0)) + objects[8].substring(1).toLowerCase()));
+            out.write(String.format("\tgr:hasManufacturer dbpedia:%s ;\n", dbpformat(objects[8])));
 
             out.write(String.format("\tmot:vehiclemodel \"%s\"^^xsd:string ;\n", objects[9]));
             
@@ -77,7 +77,7 @@ public static void main(String args[]) {
                         break;
                 case 'L':  fuelType = "dbpedia:Liquefied_petroleum_gas";
                         break;
-                case 'O':  fuelType = "Other";
+                case 'O':  fuelType = "dbpedia:Alternative_fuel_vehicle";
                         break;                        
                 default: fuelType = "None Found";
                         break;
@@ -97,4 +97,20 @@ public static void main(String args[]) {
     System.err.println("Error: " + e.getMessage());
     }
     }
+	
+	public static String dbpformat(String name){
+		String[] words = name.replaceAll("[()]", "").split(" ");
+		StringBuilder builder = new StringBuilder();	
+		
+		for (int i=0; i < words.length; i++) {
+			builder.append(words[i].charAt(0) + words[i].substring(1).toLowerCase());
+			
+			if (i == words.length - 1) {			
+				break;
+			}else {
+				builder.append("_");
+			}
+		}
+		return builder.toString();
+	}
 }

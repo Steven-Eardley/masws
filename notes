@@ -11,3 +11,7 @@ Postcodes are matched on dbpedia
 Syntax validates with http://www.rdfabout.com/demo/validator/
 
 vis http://graves.cl/visualRDF/?url=http%3A%2F%2Fwww.heppnetz.de%2Fontologies%2Fvso%2Fns%23
+
+---- Assigment 3
+
+found the larger data set doesnt properly read into twinkle - substitute spaces for _ to handle manufacturers like 'tiawan golden bee'
