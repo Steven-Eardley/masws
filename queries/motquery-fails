@@ -1,0 +1,13 @@
+PREFIX dbpedia: <http://dbpedia.org/resource/> 
+PREFIX vso: <http://www.heppnetz.de/ontologies/vso/ns#> 
+PREFIX gr:  <http://purl.org/goodrelations/v1#> 
+PREFIX mot: <http://vocab.inf.ed.ac.uk/mot/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?manufacturer (COUNT(?x) AS ?count)
+WHERE {
+    ?x gr:hasManufacturer ?manufacturer .
+    ?y mot:testvehicle ?x .
+    ?y mot:testresult "F"^^xsd:string .}
+GROUP BY ?manufacturer
+ORDER BY ASC(?manufacturer)
