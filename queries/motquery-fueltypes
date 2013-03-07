@@ -4,8 +4,8 @@ PREFIX gr:  <http://purl.org/goodrelations/v1#>
 PREFIX mot: <http://vocab.inf.ed.ac.uk/mot/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?fuel count(distinct ?x)
-WHERE {
-    ?x vso:fuelType ?fuel .}
+SELECT ?fuel (COUNT(distinct ?x) AS ?count)
+WHERE { ?x vso:fuelType ?fuel .}
 GROUP BY ?fuel
+ORDER BY ?count
 LIMIT 10
