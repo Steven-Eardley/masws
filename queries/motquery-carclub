@@ -1,0 +1,21 @@
+PREFIX dbpedia: <http://dbpedia.org/resource/> 
+PREFIX vso: <http://www.heppnetz.de/ontologies/vso/ns#> 
+PREFIX gr:  <http://purl.org/goodrelations/v1#> 
+PREFIX mot: <http://vocab.inf.ed.ac.uk/mot/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+ 
+CONSTRUCT  { ?x a vso:Automobile .
+    ?x mot:vehiclemodel ?vehiclemodel .
+    ?x vso:color ?colour .
+                          ?x vso:fuelType ?fueltype .
+                          ?x vso:engineDisplacement ?disp .
+                          ?x vso:firstRegistration ?regdate}
+
+WHERE
+  { ?x mot:vehiclemodel ?vehiclemodel .
+     ?x gr:hasManufacturer dbpedia:Land_Rover .
+     ?x vso:color ?colour .
+     ?x vso:fuelType ?fueltype .
+     ?x vso:engineDisplacement ?disp .
+     ?x vso:firstRegistration ?regdate .
+      FILTER (?regdate < "1973-01-01"^^xsd:date) }
