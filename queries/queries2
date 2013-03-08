@@ -1,0 +1,23 @@
+PREFIX dbpedia: <http://dbpedia.org/resource/> 
+PREFIX vso: <http://www.heppnetz.de/ontologies/vso/ns#> 
+PREFIX gr:  <http://purl.org/goodrelations/v1#> 
+PREFIX mot: <http://vocab.inf.ed.ac.uk/mot/> 
+
+SELECT  COUNT(*)
+
+WHERE
+  {?x vso:fuelType dbpedia:Diesel_fuel}
+
+
+PREFIX dbpedia: <http://dbpedia.org/resource/> 
+PREFIX vso: <http://www.heppnetz.de/ontologies/vso/ns#> 
+PREFIX gr:  <http://purl.org/goodrelations/v1#> 
+PREFIX mot: <http://vocab.inf.ed.ac.uk/mot/> 
+
+SELECT  ?testresult ?vehiclemodel
+
+WHERE
+  {?x mot:vehiclemodel ?vehiclemodel.
+?x mot:testresult ?testresult.
+FILTER(regex(?testresult, "^F")).
+}
